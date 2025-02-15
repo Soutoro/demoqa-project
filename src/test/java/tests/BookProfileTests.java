@@ -12,7 +12,7 @@ public class BookProfileTests extends BaseTest{
 
     @Test
     @DisplayName("Добавление книги в пустую таблицу через api и удаление через ui")
-    public void addBookWithApiAndDeleteWithUi() throws Exception {
+    public void addBookWithApiAndDeleteWithUi() {
 
         authorizationSteps.authorizationWithApi();
         addAndDeleteBookSteps.addBookWithApi();
