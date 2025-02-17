@@ -2,6 +2,7 @@ package steps;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import configs.PagePath;
 import io.qameta.allure.Step;
 import pages.LoginPage;
 import pages.ProfilePage;
@@ -19,7 +20,7 @@ public class DeleteUserSteps extends BaseTest {
     @Step("Авторизоваться через UI и удалить пользователя")
     public void authorizedAndDeleteUser() {
 
-        open("/login");
+        open(PagePath.LOGIN);
         loginPage.userNameInput().setValue(newUserData.getNewUserLogin());
         loginPage.passwordInput().setValue(newUserData.getNewPassword());
         loginPage.submitButton().click();

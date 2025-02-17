@@ -1,6 +1,7 @@
 package steps;
 
 import com.codeborne.selenide.Selenide;
+import configs.PagePath;
 import io.qameta.allure.Step;
 import pages.ProfilePage;
 import schemas.AddBookSchema;
@@ -31,7 +32,7 @@ public class AddAndDeleteBookSteps extends BaseTest {
     @Step("Удалить книгу через UI")
     public void deleteBookWithUI() {
 
-        open("/profile");
+        open(PagePath.PROFILE);
         profilePage.deleteBookButton().click();
         profilePage.confirmDeleteButton().click();
         Selenide.confirm();
