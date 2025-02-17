@@ -17,6 +17,6 @@ public class AddAndDeleteBookHelperSteps extends BaseTest {
                 .then()
                 .extract()
                 .path("books.isbn");
-    }
 
+    }
 }

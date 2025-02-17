@@ -11,7 +11,7 @@ public class CommonTests extends BaseTest{
     DeleteUserSteps deleteUserSteps = new DeleteUserSteps();
 
     @Test
-    @DisplayName("Создание пользователя и удаление пользователя")
+    @DisplayName("Создание пользователя")
     public void createUserTest() {
 
         createUserSteps.createUser();
