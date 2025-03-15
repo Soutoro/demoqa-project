@@ -20,4 +20,8 @@ public interface BaseConfig extends Config {
     @DefaultValue("!Aa12345678")
     String getPassword();
 
+    @Key("userID")
+    @DefaultValue("8ceabcc7-76b4-42f6-a9f0-a9ca6f5789b7")
+    String getUserID();
+
 }
