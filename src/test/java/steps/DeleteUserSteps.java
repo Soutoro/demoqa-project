@@ -20,6 +20,7 @@ public class DeleteUserSteps extends BaseTest {
     @Step("Авторизоваться через UI и удалить пользователя")
     public void authorizedAndDeleteUser() {
 
+        Selenide.clearBrowserCookies();
         open(PagePath.LOGIN);
         loginPage.userNameInput().setValue(newUserData.getNewUserLogin());
         loginPage.passwordInput().setValue(newUserData.getNewPassword());

@@ -6,13 +6,15 @@ import steps.AddAndDeleteBookHelperSteps;
 
 import java.util.Collections;
 
+import static tests.BaseTest.config;
+
 public class AddBookSchema {
 
     AddAndDeleteBookHelperSteps addAndDeleteBookHelperSteps = new AddAndDeleteBookHelperSteps();
 
     public AddListOfBooksResponse addBookBody() {
 
-        return new AddListOfBooksResponse("58fe457b-76c5-4b94-aa50-6356b28df725",
+        return new AddListOfBooksResponse(config.getUserID(),
                 Collections.singletonList(new CollectionOfIsbnsItem(addAndDeleteBookHelperSteps.getBooksIsbn().get(1))));
     }
 }

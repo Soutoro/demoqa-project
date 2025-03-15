@@ -13,53 +13,33 @@ public class TextBoxPage {
     Faker emailFaker = new Faker();
 
     public SelenideElement userNameInput() {
-        return $x("//input[@id='userName']");
+        return $x("//input[@id='userName']").as("Поле ввода 'Full Name'");
     }
-
     public String userNameValue() { return faker.name().firstName(); }
-
     public SelenideElement userEmailInput() {
-        return $x("//input[@id='userEmail']");
+        return $x("//input[@id='userEmail']").as("Поле ввода 'Email'");
     }
-
     public String userEmailValue() {
         return emailFaker.internet().emailAddress();
     }
-
-    public SelenideElement userCurrentAddressInput() {
-        return $x("//textarea[@id='currentAddress']");
-    }
-
+    public SelenideElement userCurrentAddressInput() {return $x("//textarea[@id='currentAddress']").as("Поле ввода 'Current Address'");}
     public String userCurrentAddressValue() {
         return faker.address().streetAddress();
     }
-
-    public SelenideElement userPermanentAddressInput() {
-        return $x("//textarea[@id='permanentAddress']");
-    }
-
+    public SelenideElement userPermanentAddressInput() {return $x("//textarea[@id='permanentAddress']").as("Поле ввода 'Permanent Address'");}
     public String userPermanentAddressValue() {
         return faker.address().streetAddress();
     }
-
     public SelenideElement submitButton() {
-        return $x("//button[@id='submit']");
+        return $x("//button[@id='submit']").as("Кнопка 'Submit'");
     }
-
     public SelenideElement userNameResult() {
-        return $x("//p[@id='name']");
+        return $x("//p[@id='name']").as("Поле вывода 'Full Name'");
     }
-
     public SelenideElement userEmailResult() {
-        return $x("//p[@id='email']");
+        return $x("//p[@id='email']").as("Поле вывода 'Email'");
     }
-
-    public SelenideElement userCurrentAddressResult() {
-        return $x("//p[@id='currentAddress']");
-    }
-
-    public SelenideElement userPermanentAddressResult() {
-        return $x("//p[@id='permanentAddress']");
-    }
+    public SelenideElement userCurrentAddressResult() {return $x("//p[@id='currentAddress']").as("Поле вывода 'Current Address'");}
+    public SelenideElement userPermanentAddressResult() {return $x("//p[@id='permanentAddress']").as("Поле вывода 'Permanent Address'");}
 
 }
